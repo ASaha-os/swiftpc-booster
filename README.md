@@ -102,6 +102,9 @@ This project is released under the MIT License — feel free to modify and redis
 css
 Copy code
 MIT License © 2025 [Your Name]
+
+---
+
 🧰 Recommended Alternatives (Built-in)
 If you prefer not to use scripts, Windows offers native cleanup tools:
 
