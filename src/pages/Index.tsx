@@ -2,6 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Download, Zap, Github, Linkedin, Twitter } from "lucide-react";
 
 const Index = () => {
+  const handleWindowsDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/BoostPC.bat";
+    link.download = "BoostPC.bat";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -45,12 +54,9 @@ const Index = () => {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <Button variant="hero" size="xl">
+                <Button variant="hero" size="xl" onClick={handleWindowsDownload}>
                   <Download className="mr-2 h-5 w-5" />
                   Download for Windows 
-                </Button>
-                <Button variant="outline" size="xl" className="border-2">
-                  View on GitHub
                 </Button>
               </div>
             </div>
@@ -69,11 +75,11 @@ const Index = () => {
                   <div className="space-y-2">
                     <p className="text-primary">$ boostpc --optimize</p>
                     <p className="text-muted-foreground">Analyzing system...</p>
-                    <p className="text-accent-yellow">⚡ CPU optimization: <span className="text-foreground">+35% faster</span></p>
+                    <p className="text-accent-yellow">🧹 Cleaning temp and cache files...</p>
                     <p className="text-accent-pink">💾 Memory cleanup: <span className="text-foreground">2.4GB freed</span></p>
                     <p className="text-primary">🚀 Startup time: <span className="text-foreground">-42% faster</span></p>
                     <p className="text-accent-purple">✓ Optimization complete!</p>
-                    <p className="text-muted-foreground mt-4">Performance boost: <span className="text-accent-yellow font-bold">87%</span></p>
+                    <p className="text-muted-foreground mt-4">⚡ System cleanup complete — <span className="text-accent-yellow font-bold">smoother performance ahead! </span></p>
                   </div>
                 </div>
                 
@@ -144,7 +150,7 @@ const Index = () => {
           <p className="text-lg md:text-xl text-muted-foreground mb-10">
             Join thousands of users who have already optimized their Windows experience
           </p>
-          <Button variant="hero" size="xl">
+          <Button variant="hero" size="xl" onClick={handleWindowsDownload}>
             <Download className="mr-2 h-5 w-5" />
             Download Now - It's Free
           </Button>
