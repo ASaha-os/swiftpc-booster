@@ -31,6 +31,9 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        "accent-yellow": "hsl(var(--accent-yellow))",
+        "accent-purple": "hsl(var(--accent-purple))",
+        "accent-pink": "hsl(var(--accent-pink))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -64,10 +67,13 @@ export default {
       },
       backgroundImage: {
         'gradient-primary': 'var(--gradient-primary)',
+        'gradient-secondary': 'var(--gradient-secondary)',
         'gradient-hero': 'var(--gradient-hero)',
       },
       boxShadow: {
-        'glow': 'var(--shadow-glow)',
+        'cyan': 'var(--shadow-cyan)',
+        'pink': 'var(--shadow-pink)',
+        'purple': 'var(--shadow-purple)',
         'strong': 'var(--shadow-strong)',
       },
       borderRadius: {

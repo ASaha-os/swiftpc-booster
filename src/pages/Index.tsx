@@ -19,9 +19,12 @@ const Index = () => {
         
         {/* Hero Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center animate-fade-in-up">
-          <h1 className="mb-6 text-6xl md:text-7xl lg:text-8xl font-black tracking-tight">
-            Unlock Peak{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+          <h1 className="mb-6 text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight">
+            Unlock{" "}
+            <span className="text-primary">
+              Peak
+            </span>{" "}
+            <span className="text-accent-yellow">
               Performance
             </span>
           </h1>
@@ -46,9 +49,9 @@ const Index = () => {
       {/* How It Works Section */}
       <section className="relative px-6 py-32 bg-card/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto">
-          <h2 className="mb-20 text-5xl md:text-6xl font-black text-center">
+          <h2 className="mb-20 text-5xl md:text-6xl font-black text-center leading-tight">
             Setup in{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-primary">
               Seconds
             </span>
           </h2>
@@ -57,7 +60,7 @@ const Index = () => {
             {/* Step 1 */}
             <div className="group text-center animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <div className="mb-6 flex justify-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-primary shadow-glow group-hover:shadow-strong transition-all duration-300 group-hover:scale-110">
+                <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-primary shadow-cyan group-hover:shadow-strong transition-all duration-300 group-hover:scale-110">
                   <Download className="h-12 w-12 text-primary-foreground" />
                 </div>
               </div>
@@ -70,8 +73,8 @@ const Index = () => {
             {/* Step 2 */}
             <div className="group text-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="mb-6 flex justify-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-primary shadow-glow group-hover:shadow-strong transition-all duration-300 group-hover:scale-110">
-                  <Settings className="h-12 w-12 text-primary-foreground" />
+                <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-accent-pink shadow-pink group-hover:shadow-strong transition-all duration-300 group-hover:scale-110">
+                  <Settings className="h-12 w-12 text-background" />
                 </div>
               </div>
               <h3 className="mb-4 text-2xl font-bold">Run the Optimizer</h3>
@@ -83,8 +86,8 @@ const Index = () => {
             {/* Step 3 */}
             <div className="group text-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               <div className="mb-6 flex justify-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-primary shadow-glow group-hover:shadow-strong transition-all duration-300 group-hover:scale-110">
-                  <Rocket className="h-12 w-12 text-primary-foreground" />
+                <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-accent-yellow shadow-purple group-hover:shadow-strong transition-all duration-300 group-hover:scale-110">
+                  <Rocket className="h-12 w-12 text-background" />
                 </div>
               </div>
               <h3 className="mb-4 text-2xl font-bold">Enjoy a Faster PC</h3>
@@ -99,9 +102,9 @@ const Index = () => {
       {/* Footer Section */}
       <footer className="relative px-6 py-24 border-t border-border/50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="mb-12 text-5xl md:text-6xl font-black">
+          <h2 className="mb-12 text-5xl md:text-6xl font-black leading-tight">
             Crafted with{" "}
-            <span className="inline-block animate-pulse-glow">❤️</span>
+            <span className="text-accent-pink inline-block animate-pulse-glow">❤️</span>
           </h2>
           
           <div className="flex justify-center gap-8 mt-8">
@@ -112,7 +115,7 @@ const Index = () => {
               className="group"
               aria-label="GitHub"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-secondary hover:bg-gradient-primary transition-all duration-300 shadow-glow hover:shadow-strong hover:scale-110">
+              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-card hover:bg-primary transition-all duration-300 shadow-cyan hover:shadow-strong hover:scale-110">
                 <Github className="h-8 w-8 text-foreground group-hover:text-primary-foreground transition-colors" />
               </div>
             </a>
@@ -124,8 +127,8 @@ const Index = () => {
               className="group"
               aria-label="LinkedIn"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-secondary hover:bg-gradient-primary transition-all duration-300 shadow-glow hover:shadow-strong hover:scale-110">
-                <Linkedin className="h-8 w-8 text-foreground group-hover:text-primary-foreground transition-colors" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-card hover:bg-accent-pink transition-all duration-300 shadow-pink hover:shadow-strong hover:scale-110">
+                <Linkedin className="h-8 w-8 text-foreground group-hover:text-background transition-colors" />
               </div>
             </a>
             
@@ -136,8 +139,8 @@ const Index = () => {
               className="group"
               aria-label="Twitter/X"
             >
-              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-secondary hover:bg-gradient-primary transition-all duration-300 shadow-glow hover:shadow-strong hover:scale-110">
-                <Twitter className="h-8 w-8 text-foreground group-hover:text-primary-foreground transition-colors" />
+              <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-card hover:bg-accent-yellow transition-all duration-300 shadow-purple hover:shadow-strong hover:scale-110">
+                <Twitter className="h-8 w-8 text-foreground group-hover:text-background transition-colors" />
               </div>
             </a>
           </div>
