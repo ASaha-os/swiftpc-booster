@@ -1,73 +1,112 @@
-# Welcome to your Lovable project
+# ⚡ SwiftPC-Booster
 
-## Project info
+**SwiftPC-Booster** is a lightweight Windows batch utility that helps you reclaim disk space and improve system responsiveness by cleaning out temporary files, cached data, and the Recycle Bin.
 
-**URL**: https://lovable.dev/projects/8793d0f9-d1c0-47e0-84b3-77365628f188
+> 🧹 One click to clear system clutter safely and efficiently.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+- Deletes temporary files from:
+  - `%TEMP%` (user temp folder)
+  - `C:\Windows\Temp`
+- Clears old prefetch data from `C:\Windows\Prefetch`
+- Empties the Recycle Bin via PowerShell
+- Automatically requests Administrator privileges
+- Provides clear status output for each operation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8793d0f9-d1c0-47e0-84b3-77365628f188) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ⚠️ Important Notes
 
-**Use your preferred IDE**
+- **Administrator access is required** to modify system folders.  
+  The script will prompt for elevation automatically if needed.
+- **Deleting Prefetch data is optional** — it is *not* necessary for performance.  
+  Windows automatically manages Prefetch to speed up app loading; the script clears it only if you choose to.
+- The cleanup operations are safe, but **use at your own risk**.  
+  Always ensure you understand what’s being deleted before automating this.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Installation
 
-Follow these steps:
+1. Download or clone this repository:
+   ```bash
+   git clone https://github.com/ASaha-os/switfpc-booster.git
+Open the folder in File Explorer.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Right-click switfpc-booster.bat and select:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Run as administrator
 
-# Step 3: Install the necessary dependencies.
-npm i
+Follow on-screen messages — the script will:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Clear temporary folders
 
-**Edit a file directly in GitHub**
+Delete unnecessary cached files
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Empty the Recycle Bin
 
-**Use GitHub Codespaces**
+Display a summary when complete
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+⚙️ Usage
+🖱️ Manual Run
+Simply double-click the batch file (right-click → Run as administrator).
 
-## What technologies are used for this project?
+⏰ Optional: Scheduled Cleanup
+You can automate it using Windows Task Scheduler:
 
-This project is built with:
+Open Task Scheduler → Create Task
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Under General, check:
 
-## How can I deploy this project?
+“Run with highest privileges”
 
-Simply open [Lovable](https://lovable.dev/projects/8793d0f9-d1c0-47e0-84b3-77365628f188) and click on Share -> Publish.
+Under Actions, choose:
 
-## Can I connect a custom domain to my Lovable project?
+Start a program → Browse to switfpc-booster.bat
 
-Yes, you can!
+Set your preferred trigger (e.g., weekly).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+🧠 How It Works
+Step	Task	Command
+1	Clear Prefetch files	del /f /q %windir%\Prefetch\*
+2	Clear user temp files	del /f /q %TEMP%\*
+3	Clear system temp files	del /f /q %windir%\Temp\*
+4	Empty Recycle Bin	powershell Clear-RecycleBin -Force
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+🧩 Compatibility
+✅ Windows 10
+
+✅ Windows 11
+
+⚠️ Not needed or compatible with macOS / Linux (they auto-manage temp files)
+
+🪪 License
+This project is released under the MIT License — feel free to modify and redistribute responsibly.
+
+css
+Copy code
+MIT License © 2025 [Your Name]
+🧰 Recommended Alternatives (Built-in)
+If you prefer not to use scripts, Windows offers native cleanup tools:
+
+Disk Cleanup: cleanmgr.exe
+
+Storage Sense: Settings → System → Storage → Storage Sense
+
+These provide similar cleanup features with full system safety.
+
+💡 Future Ideas
+ Add PowerShell version with progress and logging
+
+ Add command-line switches (/silent, /log, /prefetch-off)
+
+ Create cross-platform version for macOS & Linux (optional)
+
+💬 Feedback
+Found a bug or have a suggestion?
+Open an issue or submit a pull request!
+
+SwiftPC-Booster — simple, fast, and effective system cleanup.

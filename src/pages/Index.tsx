@@ -47,7 +47,7 @@ const Index = () => {
               <div className="flex flex-wrap gap-4">
                 <Button variant="hero" size="xl">
                   <Download className="mr-2 h-5 w-5" />
-                  Download for Windows
+                  Download for Windows 
                 </Button>
                 <Button variant="outline" size="xl" className="border-2">
                   View on GitHub
@@ -156,7 +156,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
-              <div className="text-xl font-black mb-2">BoostPC</div>
+              <div className="text-xl font-black mb-2">Developed By Akash Saha</div>
               <p className="text-sm text-muted-foreground">
                 Crafted with <span className="text-accent-pink">❤️</span> for faster computing
               </p>
@@ -164,7 +164,7 @@ const Index = () => {
             
             <div className="flex items-center gap-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/ASaha-os/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-card hover:bg-primary transition-all duration-300 flex items-center justify-center group"
@@ -174,7 +174,7 @@ const Index = () => {
               </a>
               
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/akash-saha-764359307/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-card hover:bg-accent-pink transition-all duration-300 flex items-center justify-center group"
@@ -183,15 +183,9 @@ const Index = () => {
                 <Linkedin className="h-5 w-5 text-muted-foreground group-hover:text-background transition-colors" />
               </a>
               
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-card hover:bg-accent-yellow transition-all duration-300 flex items-center justify-center group"
-                aria-label="Twitter/X"
-              >
-                <Twitter className="h-5 w-5 text-muted-foreground group-hover:text-background transition-colors" />
-              </a>
+              
+      
+
             </div>
           </div>
           
